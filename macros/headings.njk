@@ -1,0 +1,18 @@
+{% from 'macros/paragraph.njk' import parseText %}
+
+{% macro heading(block) %}
+
+  {% set headings =
+    {'heading_1' : 'h1',
+      'heading_2' : 'h2',
+      'heading_3' : 'h3'} %}
+
+  {% set currentHeading = headings[block.type] %}
+
+  <{{ currentHeading }}>
+  {% for text in block[block.type].text %}
+    {{ parseText(text) }}
+  {% endfor %}
+  </{{ currentHeading }}>
+
+{% endmacro %}

@@ -1,0 +1,39 @@
+---
+  layout: post
+  pagination:
+    data : notion.posts
+    size : 1
+    alias : post
+    addAllPagesToCollections: true
+  permalink: "posts/{{ post.title | slug }}/index.html"
+  eleventyComputed:
+    title: "{{ post.title }}"
+  tags: ['post', 'posts']
+---
+{% from 'macros/paragraph.njk' import paragraph %}
+{% from 'macros/image.njk' import image %}
+{% from 'macros/video.njk' import video %}
+{% from 'macros/headings.njk' import heading %}
+{% from 'macros/list.njk' import list %}
+{% from 'macros/blockquote.njk' import blockquote %}
+
+{%- for block in post.content.results -%}
+  {%  if block.type == 'paragraph'  %}
+    {{ paragraph(block) }}
+  {% endif %}
+  {%  if block.type == 'image'  %}
+    {{ image(block) }}
+  {% endif %}
+  {%  if block.type == 'video'  %}
+    {{ video(block) }}
+  {% endif %}
+  {%  if 'heading' in block.type  %}
+    {{ heading(block) }}
+  {% endif %}
+  {%  if block.type == 'quote'  %}
+    {{ blockquote(block) }}
+  {% endif %}
+  {%  if 'list_item' in block.type  %}
+    {{ list(block) }}
+  {% endif %}
+{%- endfor -%}

@@ -1120,3 +1120,105 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* Notion */
+
+.strikethrough
+{
+  text-decoration: line-through;
+}
+
+.underline
+{
+  text-decoration: underline;
+}
+
+.video-container
+{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.person
+{
+  padding: 1em;
+}
+
+.authors
+{
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.authors li {
+  float: left;
+}
+
+.tag {
+  background: lightseagreen;
+  border-radius: 3px 0 0 3px;
+  color: whitesmoke;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px 16px 0px 16px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  border-radius: 3px;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.gray
+{
+  background: #454B4E;
+}
+.brown
+{
+  background: #434040;
+}
+.orange
+{
+  background: #594A3A;
+}
+.yellow
+{
+  background: #59563B;
+}
+.green
+{
+  background: #354C4B;
+}
+.blue
+{
+  background: #364954;
+}
+.purple
+{
+  background: #443F57;
+}
+.pink
+{
+  background: #533B4C;
+}
+.red
+{
+  background: #594141;
+}

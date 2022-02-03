@@ -1,0 +1,13 @@
+{% macro video(block) %}
+  <div class="video-container">
+    {% if block.video.type == "external" and 'youtube' in block.video.external.url %}
+        <iframe class="video"
+                src="{{ block.video.external.url | replace("watch?v=", "embed/")}}"
+                title="YouTube video player"
+                rameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    {% endif %}
+  </div>
+{% endmacro %}

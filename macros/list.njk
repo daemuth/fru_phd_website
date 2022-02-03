@@ -1,0 +1,17 @@
+{% from 'macros/paragraph.njk' import parseText %}
+
+{% macro list(block) %}
+
+  {% set lists = {'bulleted_list_item' : 'ul', 'numbered_list_item' : 'ol'} %}
+
+  {% set currentList = lists[block.type] %}
+
+  <{{ currentList }}>
+    <li>
+      {% for text in block[block.type].text %}
+        {{ parseText(text) }}
+      {% endfor %}
+    </li>
+  </{{ currentList }}>
+
+{% endmacro %}

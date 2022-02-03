@@ -1,0 +1,17 @@
+{% from 'macros/paragraph.njk' import parseText %}
+
+{% macro image(block) %}
+  <figure>
+
+    <img src={{ block.image[block.image.type].url }}>
+
+    {% if block.image.caption %}
+      <figcaption>
+        {% for caption in block.image.caption %}
+          {{ parseText(caption) }}
+        {% endfor %}
+      </figcaption>
+    {% endif %}
+
+  </figure>
+{% endmacro %}

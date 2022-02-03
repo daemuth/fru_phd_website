@@ -1,4 +1,4 @@
-# eleventy-high-performance-blog
+# eleventy-high-performance-blog with Notion and Svelte
 
 A starter repository for building a blog with the [Eleventy static site generator](https://www.11ty.dev/) implementing a wide range of performance best practices.
 
@@ -12,6 +12,8 @@ Based on the awesome [eleventy-base-blog](https://github.com/11ty/eleventy-base-
 - [Original site this template was based on](https://www.industrialempathy.com/)
 
 ## Getting Started
+
+
 
 ### 1. Generate a new repository from this repository template
 

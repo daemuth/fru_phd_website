@@ -1,0 +1,21 @@
+{% macro paragraph(block) %}
+  <p>
+  {% for text in block.paragraph.text %}
+    {{  parseText(text) }}
+  {% endfor %}
+  </p>
+{% endmacro %}
+
+{% macro parseText(text) %}
+  <span
+    class="
+        {% if text.annotations.strikethrough %} strikethrough {% endif %}
+        {% if text.annotations.underline %} underline {% endif %} ">
+
+    {% if text.annotations.bold %}<b>{% endif %}
+      {% if text.annotations.italic %}<em>{% endif %}
+        {{ text.plain_text }}
+        {% if text.annotations.italic %}</em>{% endif %}
+      {% if text.annotations.bold %}</b>{% endif %}
+    </span>
+{% endmacro %}

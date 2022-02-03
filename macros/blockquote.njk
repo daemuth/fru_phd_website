@@ -1,0 +1,12 @@
+{% from 'macros/paragraph.njk' import parseText %}
+{# TODO: How to split via footer tag? #}
+
+{% macro blockquote(block) %}
+
+  <blockquote>
+    {% for text in block.quote.text %}
+      {{ parseText(text) }}
+    {% endfor %}
+  </blockquote>
+
+{% endmacro %}
