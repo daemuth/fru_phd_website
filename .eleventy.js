@@ -60,6 +60,11 @@ const CleanCSS = require("clean-css");
 const GA_ID = require("./_data/metadata.json").googleAnalyticsId;
 const { cspDevMiddleware } = require("./_11ty/apply-csp.js");
 
+//Svelte
+const embedSvelte = require('eleventy-plugin-embed-svelte');
+const sveltePreprocess = require('svelte-preprocess');
+const { terser } = require('rollup-plugin-terser');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -71,6 +76,17 @@ module.exports = function (eleventyConfig) {
     selector:
       "img,amp-img,amp-video,meta[property='og:image'],meta[name='twitter:image'],amp-story",
     verbose: false,
+  });
+
+  eleventyConfig.addPlugin(embedSvelte, {
+    // Directory that hosts your *.svelte component files (Optional)
+    svelteDir: './svelte',
+    // Pass options to rollup-plugin-svelte. (Optional)
+    rollupPluginSvelteOptions: { preprocess: sveltePreprocess() },
+    // Array of Rollup input plugins. (Optional)
+    rollupInputPlugins: [],
+    // Array of Rollup output plugins. (Optional)
+    rollupOutputPlugins: [terser()]
   });
 
   eleventyConfig.addPlugin(require("./_11ty/img-dim.js"));
