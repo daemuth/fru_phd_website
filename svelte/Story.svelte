@@ -73,7 +73,7 @@
     currentCard = cards.find((card) => card["properties"]["Card ID"]["number"] == cardId)
     console.log(currentCard)
   }
-  var unityInstance = UnityLoader.instantiate("game", "/game/Build/dev.json", {onProgress: UnityProgress});
+  var unityInstance = UnityLoader.instantiate("game", "/game/Build/index.html.json", {onProgress: UnityProgress});
 
   // let cards = [
   //   { "id": 100, "title" : 100, "description" : "Description for 100", "img": "" },
