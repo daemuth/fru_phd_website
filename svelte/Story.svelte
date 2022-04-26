@@ -69,22 +69,11 @@
   let currentCard = null;
   window.UnityCardChanged = function(cardId)
   {
-    console.log(cardId)
     currentCard = cards.find((card) => card["properties"]["Card ID"]["number"] == cardId)
-    console.log(currentCard)
   }
   var unityInstance = UnityLoader.instantiate("game", "/game/Build/index.html.json", {onProgress: UnityProgress});
 
-  // let cards = [
-  //   { "id": 100, "title" : 100, "description" : "Description for 100", "img": "" },
-  //   { "id": 200, "title" : 200, "description" : "Description for 200", "img": "" },
-  //   { "id": 300, "title" : 300, "description" : "Description for 300", "img": "" },
-  //   { "id": 400, "title" : 400, "description" : "Description for 400", "img": "" },
-  //   { "id": 500, "title" : 500, "description" : "Description for 500", "img": "" }
-  //   ]
-  console.log(cards)
 </script>
-
 
 <div class="container">
   <div class="side-a">
