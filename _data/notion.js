@@ -35,7 +35,7 @@ module.exports = async function () {
   for (var post of posts.results) {
     let post_url = 'https://api.notion.com/v1/blocks/' + post.id + '/children?page_size=100'
     post.content = await Cache(post_url, {
-      duration: "1d",
+      duration: "1s",
       type: "json",
       fetchOptions: {
         method: "GET",
@@ -51,7 +51,7 @@ module.exports = async function () {
   for (var page of pages.results) {
     let page_url = 'https://api.notion.com/v1/blocks/' + page.id + '/children?page_size=100'
     page.content = await Cache(page_url, {
-      duration: "1d",
+      duration: "1s",
       type: "json",
       fetchOptions: {
         method: "GET",
@@ -67,7 +67,7 @@ module.exports = async function () {
   for (var card of cards.results) {
     let card_url = 'https://api.notion.com/v1/blocks/' + card.id + '/children?page_size=100'
     card.content = await Cache(card_url, {
-      duration: "1d",
+      duration: "1s",
       type: "json",
       fetchOptions: {
         method: "GET",
