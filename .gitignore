@@ -11,3 +11,5 @@ export
 .env
 
 game/
+
+debug.log
