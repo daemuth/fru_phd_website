@@ -19,7 +19,7 @@
 {% from 'macros/list.njk' import list %}
 {% from 'macros/blockquote.njk' import blockquote %}
 
-{%- for block in post.content.results -%}
+{%- for block in notion_page.content.results -%}
   {%  if block.type == 'paragraph'  %}
     {{ paragraph(block) }}
   {% endif %}
