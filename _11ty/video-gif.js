@@ -40,6 +40,8 @@ exports.gif2mp4 = async function (filename) {
     "error",
     "-i",
     join("_site", filename),
+    "-vf",
+    "pad=ceil(iw/2)*2:ceil(ih/2)*2",
     "-filter_complex",
     "[0:v] fps=15, scale=iw:-2",
     "-vsync",
