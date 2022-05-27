@@ -44,6 +44,11 @@
 
     <link rel="preconnect" href="/" crossorigin>
     <link rel="preload" href="/fonts/Inter-3.19.var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+
+
     <script async defer src="{{ "/js/min.js" | addHash }}"
       {% if webvitals %}data-cwv-src="{{ "/js/web-vitals.js" | addHash }}"{% endif %}>
     </script>
@@ -54,8 +59,7 @@
     <script csp-hash>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')
     </script>
     <!-- css is inserted by optimize-html custom plugin -->
-    <script src="game/TemplateData/UnityProgress.js"></script>
-    <script src="game/Build/UnityLoader.js"></script>
+    <script src="/game/Build/index.html.loader.js"></script>
   </head>
   <body>
     <header>
