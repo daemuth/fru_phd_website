@@ -266,9 +266,11 @@ SOFTWARE.
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
 }
 body {
   margin: 0;
+  height: 100%;
 }
 h1 {
   font-size: 2em;
@@ -920,6 +922,7 @@ main {
   max-width: 70rem;
   margin: 0 auto;
   border-top: 0.5px solid #ccc;
+  height: 100%;
 }
 footer {
   background: rgba(0, 0, 0, 0.8);
@@ -1221,4 +1224,75 @@ a {
 .red
 {
   background: #594141;
+}
+
+.welcome
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.welcome:before
+{
+  content: "";
+  display: flex;
+  position: fixed !important;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("img/WelcomePage_v2_blur.jpg");
+  background-size: cover;
+  filter: brightness(50%) blur(6px);
+  z-index: -1;
+}
+
+.welcome-inside
+{
+  position: relative;
+
+}
+
+
+.welcome p
+{
+  max-width: 920px;
+}
+
+
+
+.buttons
+{
+  padding-top: 1em;
+}
+
+
+.fullwidth {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Noto Serif', serif;
+}
+
+.bold
+{
+  font-weight: bold;
+}
+
+.italic
+{
+  font-style: italic;
+}
+
+.underline
+{
+  text-decoration: underline;
 }

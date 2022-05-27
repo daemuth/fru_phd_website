@@ -58,6 +58,7 @@
     <script src="/game/Build/UnityLoader.js"></script>
   </head>
   <body>
+  {% if header %}
     <header>
       <nav>
         <div id="nav">
@@ -81,16 +82,20 @@
       </noscript>
       {% endif %}
     </header>
+  %{% endif %}
 
-    <main>
+    <main class="fullwidth">
       {% block article %}
         {{ content | safe }}
       {% endblock %}
     </main>
 
+
+    {% if footer %}
     <footer>
       <a href="/about/">{{ metadata.author.name }}</a>
     </footer>
+    {% endif %}
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

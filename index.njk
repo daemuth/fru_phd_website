@@ -6,8 +6,24 @@ image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
 date: Last Modified
 ---
 
-<div id="posts">
-  <h2>Posts</h2>
-  {% set postslist = collections.posts %}
-  {% include "postslist.njk" %}
-</div>
+<section class="welcome">
+  <div class=welcome-inside">
+    <h1>Storymaker World</h1>
+    <p><b>Storymaker World</b> is a project with many faces. It occupies a little-explored border between academic
+      disciplines and is, consequently, somewhat of a chimaera thing—part literary studies and part games, part creative
+      economies, part postcolonial studies. This exhibition is the creative practice section of that research. Here, you
+      will find an interactive journey through an alternate history Africa through different mediums, discussions of
+      additional projects, sketchbook material, small games and more.</p>
+    <div class="buttons">
+      <a href="/story">
+        <button>Journey</button>
+      </a>
+      <a href="/sketchbook">
+        <button>Sketchbook</button>
+      </a>
+      <a href="/posts">
+        <button>Posts</button>
+      </a>
+    </div>
+  </div>
+</section>
