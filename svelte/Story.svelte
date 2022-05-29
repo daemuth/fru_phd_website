@@ -121,7 +121,11 @@
     background-color: #181818;
   }
 
-
+  .divider
+  {
+    max-height: 1.5em;
+    margin-top: 1em;
+  }
 </style>
 
 <script>
@@ -210,6 +214,7 @@
           isolation, but the green, towering mountains you see outside the window make you feel only peace. The
           newspaper
           on the bench next to you speaks of unrest in Europe. The year is 1922. </p>
+        <img class="divider" src="/img/dividers/01.PNG"/>
       </div>
       <div class="fullHeight">
         <h2>The Unknown and the Awful</h2>
@@ -223,6 +228,7 @@
 
         <p>The unknown and the awful always bring a man closer to his maker, the writer says. Before you, the stars are
           mute anyhow.</p>
+        <img class="divider" src="/img/dividers/02.PNG"/>
       </div>
       <div class="fullHeight">
         <h2>A Universe of Ghosts </h2>
@@ -234,6 +240,7 @@
           water.
           <em>The inextinguishable elements of individual life,</em> ink running into spiderwebs with the memory of a
           river.</p>
+        <img class="divider" src="/img/dividers/01.PNG"/>
       </div>
       <div class="fullHeight">
         <h2>In the Flicker</h2>
@@ -248,6 +255,7 @@
           in your hands. <em>Darkness, darkness.</em></p>
         <p>You walk to the edge of the water. The waves lap gently at your feet. You slip the book into your pocket and
           close your eyes.</p>
+        <img class="divider" src="/img/dividers/02.PNG"/>
       </div>
     </div>
     <div class="side-b">
@@ -288,6 +296,7 @@
         <p>“‘<em>They’re afraid because we exist,’ she says. ‘There’s nothing we did to provoke their fear, other than
           exist. There’s nothing we can do to earn their approval, except stop existing – so we can either die like they
           want, or laugh at their cowardice and go on with our lives.’”</em></p>
+        <img class="divider" src="/img/dividers/01.PNG"/>
       </div>
       <!-- AR 2-->
       <div class="fullHeight sticky"
@@ -297,6 +306,7 @@
         <p>You walk to a nook at the edge of the city. Underneath you, the sand is like an ocean: silver and blue waves
           crash against the curve of the horizon, and the wind smells like warm concrete and salt and eucalyptus.</p>
         <p>You lean on the railing, close your eyes, and listen.</p>
+        <img class="divider" src="/img/dividers/02.PNG"/>
       </div>
       <!-- AR 3-->
       <div class="fullHeight sticky"
@@ -318,6 +328,7 @@
           if that.</p>
         <p>You put it in your pocket, turn away from the balcony railing and follow the sound of wind chimes into the
           light.</p>
+        <img class="divider" src="/img/dividers/01.PNG"/>
       </div>
     </div>
     <div class="side-b">
@@ -336,6 +347,7 @@
 
 <section class="heading-container">
   <div class="welcome left-align-text">
+    <img class="divider" src="/img/dividers/02.PNG"/><br/>
     <p>Dear Reader,</p>
     <p>Thank you for playing <em>Storymaker World</em>. This game has taken you through a reimagining of the novella <i>Heart
       of Darkness—</i>sort of. Rather than an adaptation, I like to think of it as a reverse interpretation of the
@@ -349,5 +361,6 @@
     <p>[references]</p>
     <p>For a breakdown of each individual project and other supporting materials, please make your way to the <b>Sketchbook.</b>
     </p>
+    <img class="divider" src="/img/dividers/01.PNG"/><br/>
   </div>
 </section>
