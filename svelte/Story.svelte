@@ -152,9 +152,9 @@
     await tick()
 
     createUnityInstance(document.querySelector("#game"), {
-      dataUrl: "/game/Build/index.html.data",
-      frameworkUrl: "/game/Build/index.html.framework.js",
-      codeUrl: "/game/Build/index.html.wasm"
+      dataUrl: "/game/Build/index.html.data.b",
+      frameworkUrl: "/game/Build/index.html.framework.js.br",
+      codeUrl: "/game/Build/index.html.wasm.br"
     });
 
   });
