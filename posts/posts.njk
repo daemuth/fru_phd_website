@@ -1,14 +1,20 @@
----
-  layout: post
-  pagination:
-    data : notion.posts
-    size : 1
-    alias : post
-    addAllPagesToCollections: true
-  permalink: "posts/{{ post.title | slug }}/index.html"
-  eleventyComputed:
-    title: "{{ post.title }}"
-  tags: ['post', 'posts']
+---js
+{
+  layout: "post",
+  pagination: {
+    data : "notion.posts",
+    size : 1,
+    alias : "post",
+    addAllPagesToCollections: true,
+    before: function(paginationData, fullData) { return paginationData.filter(page => Object.values(page.properties.Tags.multi_select[0]).includes("post")) }
+  },
+  permalink: "posts/{{ post.custom_slug | slug }}/index.html",
+  eleventyComputed: {
+    title: "{{ post.title }}",
+    notion_data: "{{ project.notion_metadata }}"
+    },
+tags: ['post', 'posts']
+}
 ---
 {% from 'macros/paragraph.njk' import paragraph %}
 {% from 'macros/image.njk' import image %}
@@ -17,7 +23,7 @@
 {% from 'macros/list.njk' import list %}
 {% from 'macros/blockquote.njk' import blockquote %}
 
-{%- for block in post.content.results -%}
+{%- for block in post.content -%}
   {%  if block.type == 'paragraph'  %}
     {{ paragraph(block) }}
   {% endif %}

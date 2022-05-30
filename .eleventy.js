@@ -177,7 +177,7 @@ module.exports = function (eleventyConfig) {
     }
     return dt.toISO();
   });
-
+  
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if (n < 0) {
@@ -190,6 +190,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts");
   });
+
+  eleventyConfig.addCollection("projects", function (collectionApi) {
+    return collectionApi.getFilteredByTag("project");
+  });
+
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
@@ -206,17 +211,23 @@ module.exports = function (eleventyConfig) {
   // But without this the JS build artefacts doesn't trigger a build.
   eleventyConfig.setUseGitIgnore(false);
 
-  /* Markdown Overrides */
-  let markdownLibrary = markdownIt({
+  const MARKDOWN_OPTIONS = {
     html: true,
     breaks: true,
     linkify: true,
-  }).use(markdownItAnchor, {
+  };
+  /* Markdown Overrides */
+  let markdownLibrary = markdownIt(MARKDOWN_OPTIONS).use(markdownItAnchor, {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#",
   });
+
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  eleventyConfig.addFilter("toHTML", str => {
+    return new markdownIt(MARKDOWN_OPTIONS).renderInline(str);
+  });
 
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
@@ -233,7 +244,7 @@ module.exports = function (eleventyConfig) {
       },
     },
     ui: false,
-    ghostMode: false,
+    ghostMode: false
   });
 
   // Run me before the build starts

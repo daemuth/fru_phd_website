@@ -1,6 +1,5 @@
 <style>
 
-
   :global(html,body) {
     height: 100%;
     background-color: #181818;

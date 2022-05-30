@@ -1,0 +1,8 @@
+<div class="project-container">
+  {% for post in postslist | reverse %}
+    <div class="project">
+      <p><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}
+            <code>{{ post.url }}</code>{% endif %}</a></p>
+    </div>
+  {% endfor %}
+</div>

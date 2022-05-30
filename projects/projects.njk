@@ -1,14 +1,19 @@
----
-  layout: post
-  pagination:
-    data : notion.pages
-    size : 1
-    alias : notion_page
-    addAllPagesToCollections: true
-  permalink: "{{ notion_page.title | slug }}/index.html"
-  eleventyComputed:
-    title: "{{ notion_page.title }}"
-    tags: ['page']
+---js
+{
+  layout: "layouts/project.njk",
+  pagination: {
+  data : "notion.posts",
+  size : 1,
+  alias : "project",
+  addAllPagesToCollections: true,
+  before: function(paginationData, fullData) { return paginationData.filter(page => Object.values(page.properties.Tags.multi_select[0]).includes("project")) }
+  },
+  permalink: "project/{{ project.custom_slug | slug }}/index.html",
+  eleventyComputed: {
+  title: "{{ project.title }}",
+  notion_data: "{{ project.notion_metadata}}"},
+  tags: ['project']
+}
 ---
 {% from 'macros/paragraph.njk' import paragraph %}
 {% from 'macros/image.njk' import image %}
@@ -16,11 +21,15 @@
 {% from 'macros/headings.njk' import heading %}
 {% from 'macros/list.njk' import list %}
 {% from 'macros/blockquote.njk' import blockquote %}
-
-{%- for block in notion_page.content.results -%}
+<div class="notion-text">
+{%- for block in project.content -%}
   {%  if block.type == 'paragraph'  %}
     {{ paragraph(block) }}
   {% endif %}
+{%- endfor -%}
+</div>
+<div class="notion-media">
+{%- for block in project.content -%}
   {%  if block.type == 'image'  %}
     {{ image(block) }}
   {% endif %}
@@ -37,3 +46,5 @@
     {{ list(block) }}
   {% endif %}
 {%- endfor -%}
+</div>
+

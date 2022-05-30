@@ -1,7 +1,7 @@
 {% from 'macros/paragraph.njk' import parseText %}
 
 {% macro image(block) %}
-  <figure>
+  <figure class="notion-image">
 
     <img src={{ block.image[block.image.type].url }}>
 

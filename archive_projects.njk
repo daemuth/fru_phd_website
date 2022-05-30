@@ -1,0 +1,28 @@
+---
+layout: layouts/base_fullWidth.njk
+permalink: /projects/
+eleventyNavigation:
+  key: "Projects"
+  order: 1
+header : true
+---
+
+
+<div class="sketchbook-container">
+  <h1>Projects</h1>
+  {% set postslist = collections.projects %}
+  {% include "projectlist.njk" %}
+  <div class="buttons">
+    <a href="/story">
+      <button>Journey</button>
+    </a>
+    <a href="/projects">
+      <button>Projects</button>
+    </a>
+    <a href="/posts">
+      <button>Posts</button>
+    </a>
+    <a href="/about">
+      <button>About the Author</button>
+    </a>
+</div>

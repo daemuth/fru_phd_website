@@ -6,6 +6,10 @@ description: Description. Update me.
 image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
 date: Last Modified
 permalink: "/story/index.html"
+eleventyNavigation:
+  key: "Journey"
+  order: 0
+header: true
 ---
 
 {% embedSvelte "Story.svelte", { cards: notion.cards } %}

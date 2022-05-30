@@ -1,5 +1,5 @@
 {% macro video(block) %}
-  <div class="video-container">
+  <div class="notion-video video-container">
     {% if block.video.type == "external" and 'youtube' in block.video.external.url %}
         <iframe class="video"
                 src="{{ block.video.external.url | replace("watch?v=", "embed/")}}"

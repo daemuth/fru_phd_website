@@ -1,9 +1,14 @@
 ---
-layout: layouts/home.njk
-permalink: /posts/
+layout: layouts/base.njk
+permalink: "/posts/"
+eleventyNavigation:
+  key: "Posts"
+  order: 3
 ---
 
 <h1>Archive</h1>
+<div class="sketchbook-container">
+  {% set postslist = collections.posts %}
+  {% include "postslist.njk" %}
+</div>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
