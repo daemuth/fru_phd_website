@@ -23,6 +23,7 @@ module.exports = async function () {
   let dataNew = {}
 
   for (let database of notionDatabases) {
+
     let currentDatabaseUrl = `https://api.notion.com/v1/databases/${database.id}/query`
 
     // List object of all pages within database
@@ -31,8 +32,16 @@ module.exports = async function () {
     //Array of objects containing all pages
     for (let page of currentDatabaseCached.results) {
 
+      page.notion_metadata = page.properties
+      console.log(page.properties)
+
+
       if ('properties' in page && 'Name' in page.properties) {
         page.title = page.properties.Name.title[0].plain_text
+      }
+
+      if ('properties' in page && 'url' in page.properties) {
+        page.custom_slug = page.properties.url.rich_text[0].plain_text
       }
 
       page.content = []

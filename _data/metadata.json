@@ -1,8 +1,8 @@
 {
-  "title": "Title of the website. Update me.",
-  "url": "https://update-me.com",
-  "domain": "update-me.com",
-  "description": "Description of the website. Update me.",
+  "title": "Storymaker World",
+  "url": "https://phd.fruzsipittner.com",
+  "domain": "fruzsipittner.com",
+  "description": "A multimedia story project about the image of Africa, the roles we play in the narrative, and the spaces in-between. ",
   "genre": "Insert a schema.org genre",
   "googleAnalyticsId": "GA ID. Update me. Note, that this is not compatible with the not-yet-commonly used version 4 of Google Analytics",
   "sendWebVitals": false,
@@ -17,10 +17,10 @@
     "url": "https://update-me.com/feed/feed.json"
   },
   "author": {
-    "name": "Author Name. Update me.",
-    "twitterHandle": "update_me"
+    "name": "Fruzsi Pittner",
+    "twitterHandle": "rynezion"
   },
   "publisher": {
-    "name": "Publisher name. Update me."
+    "name": "Fruzsi Pittner"
   }
 }
