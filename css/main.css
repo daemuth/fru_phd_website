@@ -271,6 +271,7 @@ html {
 body {
   margin: 0;
   height: 100%;
+  overflow-y: hidden;
 }
 h1 {
   font-size: 2em;
@@ -842,7 +843,7 @@ body {
 section {
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
+  max-width: 900px;
 }
 #menu-toggle {
   display: none;
@@ -1359,11 +1360,13 @@ figure img
   box-shadow: 5px 5px 10px grey;
 }
 
-.project.buttons
-{
+.project.buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 3em;
-  margin-bottom: 3em;
+}
+
+#snapContainer
+{
+  height: 100vh;
+  overflow-y: auto;
 }
