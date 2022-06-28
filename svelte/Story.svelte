@@ -3,6 +3,7 @@
   :global(html,body) {
     height: 100%;
     background-color: #181818;
+    overflow-y: hidden;
   }
 
   :global(header,footer) {
@@ -100,7 +101,7 @@
 
   .divider {
     max-height: 1.5em;
-    margin-top: 1em;
+    margin-top: 2em;
   }
 
   section
@@ -113,6 +114,11 @@
   section > p
   {
     margin: 1em;
+  }
+
+  .subtext
+  {
+    font-size: smaller;
   }
 </style>
 
@@ -141,25 +147,13 @@
   onMount(async () => {
     await tick()
 
-    // createUnityInstance(document.querySelector("#game"), {
-    //   dataUrl: "/game/Build/index.html.data",
-    //   frameworkUrl: "/game/Build/index.html.framework.js",
-    //   codeUrl: "/game/Build/index.html.wasm"
-    // });
-
-    const sectionPositions = [];
-    const sections = document.getElementsByTagName("section")
-
-    for(let section of sections)
-    {
-      let currentOffset = section.getBoundingClientRect().top;
-      sectionPositions.push(currentOffset)
-    }
+    createUnityInstance(document.querySelector("#game"), {
+      dataUrl: "/game/Build/index.html.data",
+      frameworkUrl: "/game/Build/index.html.framework.js",
+      codeUrl: "/game/Build/index.html.wasm"
+    });
 
     const element = document.getElementById('snapContainer')
-
-    // element.scrollTo(0, sectionPositions[3])
-    console.log(sectionPositions);
 
     const {bind, unbind} = createScrollSnap(element, {
       snapDestinationY: '100%',
@@ -175,15 +169,24 @@
 </script>
 
 <div id="snapContainer">
+
   <!--Welcome-->
   <section class="heading-container">
     <div class="welcome">
-      <h1>Chapter 1 <br/> The Heart</h1>
-      <p>You wake up on a boat. What kind of boat it is and where it’s going, you don’t know—you can only hear the sails
-        catching the wind and birds calling up above, the scent of brackish water and vegetation thick in your nose. You
-        wake up on a boat. Your destination is unknown; your journey, unwritten.</p>
-      <p>The year is <b>1864</b>. When you stand, you see hills opening up to the mouth of a great river, sandy-brown in
-        the light of the greyish dawn.</p>
+      <h1>Storymaker World <br/> The Journey</h1>
+      <p>The following page is an interactive exhibition that contains a <strong>game,</strong> a <strong>gallery of posters</strong> and a <strong>gallery of Augmented Reality (AR) illustrations.</strong> For the best viewing experience, please use your browser on your computer or laptop. </p>
+      <p>To view the AR illustration gallery fully, please download the Artivive app on your <strong>mobile phone.</strong> The app can be found <strong><a href="https://play.google.com/store/apps/details?id=com.artivive&amp;hl=en_GB&amp;gl=US">here</a></strong> for Android and <a href="https://apps.apple.com/us/app/artivive/id1188737494"><strong>here</strong></a> for IOS devices. Scan each image in <em>Chapter III—Storymaker</em> using the Artivive app to see the complete illustration. </p>
+      <p>If you are having trouble with the app, you can also find the animated versions of the illustrations <a href="https://drive.google.com/drive/folders/1B3mJp44gRlXGYpiYQPeU7Ztu4JsjsRLX">here</a>.</p>
+    </div>
+  </section>
+
+  <!--Chapter 1-->
+  <section class="heading-container">
+    <div class="welcome">
+      <h1>Chapter 1.<br/> The Heart</h1>
+      <p>You wake up on a boat. Where the boat it’s going, you don’t know—you can only hear the sails catching the wind and birds calling up above, the scent of brackish water and vegetation thick in your nose. You wake up on a boat. Your destination is unknown; your journey, unwritten.</p>
+      <p>The year is <strong>1864</strong>. When you stand, you see hills opening up to the mouth of a great river, sandy-brown in the light of the greyish dawn.</p>
+      <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
   </section>
 
@@ -209,7 +212,9 @@
   <!--Posters intro-->
   <section class="heading-container">
     <div class="welcome">
-      <h1>Chapter 2 <br/> From the Highlands to the Coast</h1>
+      <h1>Chapter 2.<br/> From the Highlands to the Coast</h1>
+      <p>Time spins forward, an unspooling of history. You are on a train going East. East of where? You don’t know. There is a book open in your lap, its pages earmarked by a careless hand. The newspaper on the bench next to you speaks of unrest in Europe. The year is <strong>1922</strong>. </p>
+      <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
   </section>
 
@@ -219,11 +224,8 @@
       <div class="side-a">
         <div class="fullHeight">
           <h2>A Missed Destiny</h2>
-          <p>Time spins forward, an unspooling of history. You are on a train going East. East of where? You don’t know.
-            There is a book open in your lap, its pages earmarked by a careless hand—the writer talks of loneliness and
-            isolation, but the green, towering mountains you see outside the window make you feel only peace. The
-            newspaper on the bench next to you speaks of unrest in Europe. The year is 1922. </p>
-          <img class="divider" src="/img/dividers/01.PNG"/>
+          <p>A thin fog sits over the valley; and on either side, mountains tower like the spinal column of a creature, asleep. The writer talks of loneliness and isolation. You wonder why: as the train snakes between the peaks and into the fog, a sense of familiarity settles over you. Welcome home, safe travels. </p>
+          <p class="subtext">Pictured: An illustrated representation of the Ethiopian Highlands. The quote reads, <em>“I couldn&#39;t have felt more of lonely desolation somehow</em>, <em>had I been robbed of a belief or had missed my destiny in life…”</em> (Conrad, <em>Heart of Darkness)</em></p>
         </div>
 
       </div>
@@ -249,10 +251,8 @@
             rushing
             past too quickly to hear?</p>
 
-          <p>The unknown and the awful always bring a man closer to his maker, the writer says. Before you, the stars
-            are
-            mute anyhow.</p>
-          <img class="divider" src="/img/dividers/02.PNG"/>
+          <p>The unknown and the awful always bring a man closer to his maker, the writer says. Before you, the stars are mute anyhow.</p>
+          <p class="subtext"> Pictured: An illustrated representation of the Sahara Desert. The quote reads, “Our future was so completely unknown, and I think that the unknown and the awful always bring a man nearer to his Maker.” (Haggard, King Solomon’s Mines)</p>
         </div>
       </div>
       <div class="side-b">
@@ -278,7 +278,7 @@
             water.
             <em>The inextinguishable elements of individual life,</em> ink running into spiderwebs with the memory of a
             river.</p>
-          <img class="divider" src="/img/dividers/01.PNG"/>
+          <p class="subtext">Pictured: An illustrated representation of the coast of South Africa. The quote reads, “Truly the universe is full of ghosts, not sheeted churchyard spectres, but the inextinguishable elements of individual life.” (Haggard, King Solomon’s Mines)</p>
         </div>
       </div>
       <div class="side-b">
@@ -308,7 +308,7 @@
           <p>You walk to the edge of the water. The waves lap gently at your feet. You slip the book into your pocket
             and
             close your eyes.</p>
-          <img class="divider" src="/img/dividers/02.PNG"/>
+          <p class="subtext">Pictured: An illustration of  Nigerian women reclining by the seaside. The quote reads, “We live in the flicker—may it last as long as the old earth keeps rolling! But darkness was here yesterday.” (Conrad, Heart of Darkness)</p>
         </div>
       </div>
       <div class="side-b">
@@ -323,7 +323,9 @@
 
   <section class="heading-container">
     <div class="welcome">
-      <h1>Chapter 3 <br/> Storymaker</h1>
+      <h1>Chapter 3. <br/> Storymaker</h1>
+      <p>You wake up. You are in a room made of glass. You wake up. You are standing knee-deep in water, the river yellow and heavy with sediment. You wake up. A screen in front of you tells you the year—the article talks about species preservation and a conservatory that flies over the desert, it talks about living dreams and people touching the stars. You’re back, the city says, and you open the door.  </p>
+      <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
   </section>
 
@@ -339,7 +341,6 @@
             exist. There’s nothing we can do to earn their approval, except stop existing – so we can either die like
             they
             want, or laugh at their cowardice and go on with our lives.’”</em></p>
-          <img class="divider" src="/img/dividers/01.PNG"/>
         </div>
       </div>
       <div class="side-b">
@@ -359,7 +360,6 @@
             waves
             crash against the curve of the horizon, and the wind smells like warm concrete and salt and eucalyptus.</p>
           <p>You lean on the railing, close your eyes, and listen.</p>
-          <img class="divider" src="/img/dividers/02.PNG"/>
         </div>
       </div>
       <div class="side-b">
@@ -391,7 +391,6 @@
             if that.</p>
           <p>You put it in your pocket, turn away from the balcony railing and follow the sound of wind chimes into the
             light.</p>
-          <img class="divider" src="/img/dividers/01.PNG"/>
         </div>
       </div>
       <div class="side-b">
