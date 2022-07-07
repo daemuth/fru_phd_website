@@ -27,17 +27,23 @@
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
   }
 
   .side-a {
     display: flex;
     background-color: #1e2626;
+    flex-grow: 1;
+    flex-shrink: 0;
   }
 
   .side-b {
     display: flex;
     background-color: #1e2626;
     justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
   }
 
   .fullHeight {
@@ -97,6 +103,9 @@
 
   .heading-container {
     background-color: #181818;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
   }
 
   .divider {
@@ -119,6 +128,12 @@
   .subtext
   {
     font-size: smaller;
+  }
+
+  #gameContainer
+  {
+    height: 100%;
+    flex: 1;
   }
 </style>
 
@@ -156,7 +171,7 @@
     const element = document.getElementById('snapContainer')
 
     const {bind, unbind} = createScrollSnap(element, {
-      snapDestinationY: '100%',
+      snapDestinationY: '100vh',
       timeout: 1,
       duration: 200,
       threshold: 0.1,
