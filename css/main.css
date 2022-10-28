@@ -1368,6 +1368,92 @@ figure img
 
 #snapContainer
 {
+  max-height: 100vh;
   height: 100vh;
   overflow-y: auto;
 }
+.heading-container
+{
+  max-height: 100vh;
+}
+
+.fullwidth
+{
+  max-height: 100vh;
+}
+
+.fullHeight
+{
+  max-height: 100vh;
+}
+
+section > div > h1
+{
+  font-size: 4vh;
+}
+
+section > div > p
+{
+  font-size: 2vh;
+}
+
+
+
+#snapContainer > section
+{
+  padding: 1em;
+}
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+
+
+}
+
+.lightbox > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+

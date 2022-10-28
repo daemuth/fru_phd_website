@@ -190,8 +190,6 @@
     <div class="welcome">
       <h1>Storymaker World <br/> The Journey</h1>
       <p>The following page is an interactive exhibition that contains a <strong>game,</strong> a <strong>gallery of posters</strong> and a <strong>gallery of Augmented Reality (AR) illustrations.</strong> For the best viewing experience, please use your browser on your computer or laptop. </p>
-      <p>To view the AR illustration gallery fully, please download the Artivive app on your <strong>mobile phone.</strong> The app can be found <strong><a href="https://play.google.com/store/apps/details?id=com.artivive&amp;hl=en_GB&amp;gl=US">here</a></strong> for Android and <a href="https://apps.apple.com/us/app/artivive/id1188737494"><strong>here</strong></a> for IOS devices. Scan each image in <em>Chapter III—Storymaker</em> using the Artivive app to see the complete illustration. </p>
-      <p>If you are having trouble with the app, you can also find the animated versions of the illustrations <a href="https://drive.google.com/drive/folders/1B3mJp44gRlXGYpiYQPeU7Ztu4JsjsRLX">here</a>.</p>
     </div>
   </section>
 
@@ -246,7 +244,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/posters/1.jpg">
+          <a href="#poster-1"><img class="cover-picture" src="/img/posters/1.jpg"></a>
+          <a href="#" class="lightbox" id="poster-1">
+            <div style="background-image: url('/img/posters/1.jpg')"></div>
+          </a>
         </div>
       </div>
     </div>
@@ -272,7 +273,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/posters/2.jpg">
+          <a href="#poster-2"><img class="cover-picture" src="/img/posters/2.jpg"></a>
+          <a href="#" class="lightbox" id="poster-2">
+            <div style="background-image: url('/img/posters/2.jpg')"></div>
+          </a>
         </div>
       </div>
     </div>
@@ -298,7 +302,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/posters/3.jpg">
+          <a href="#poster-3"><img class="cover-picture" src="/img/posters/3.jpg"></a>
+          <a href="#" class="lightbox" id="poster-3">
+            <div style="background-image: url('/img/posters/3.jpg')"></div>
+          </a>
         </div>
       </div>
     </div>
@@ -328,7 +335,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/posters/4.jpg">
+          <a href="#poster-4"><img class="cover-picture" src="/img/posters/4.jpg"></a>
+          <a href="#" class="lightbox" id="poster-4">
+            <div style="background-image: url('/img/posters/4.jpg')"></div>
+          </a>
         </div>
       </div>
     </div>
@@ -339,6 +349,9 @@
   <section class="heading-container">
     <div class="welcome">
       <h1>Chapter 3. <br/> Storymaker</h1>
+      <div class="subtext">
+      <p>To view the AR illustration gallery fully, please download the Artivive app on your <strong>mobile phone.</strong> The app can be found <strong><a href="https://play.google.com/store/apps/details?id=com.artivive&amp;hl=en_GB&amp;gl=US">here</a></strong> for Android and <a href="https://apps.apple.com/us/app/artivive/id1188737494"><strong>here</strong></a> for IOS devices. Scan each image in <em>Chapter III—Storymaker</em> using the Artivive app to see the complete illustration. </p>
+      <p>If you are having trouble with the app, you can also find the animated versions of the illustrations <a href="https://drive.google.com/drive/folders/1B3mJp44gRlXGYpiYQPeU7Ztu4JsjsRLX">here</a>.</p></div>
       <p>You wake up. You are in a room made of glass. You wake up. You are standing knee-deep in water, the river yellow and heavy with sediment. You wake up. A screen in front of you tells you the year—the article talks about species preservation and a conservatory that flies over the desert, it talks about living dreams and people touching the stars. You’re back, the city says, and you open the door.  </p>
       <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
@@ -360,7 +373,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/AR/1.jpeg">
+          <a href="#ar-1"><img class="cover-picture" src="/img/AR/1.jpeg"></a>
+          <a href="#" class="lightbox" id="ar-1">
+            <div style="background-image: url('/img/AR/1.jpeg')"></div>
+          </a>
         </div>
       </div>
     </div>
@@ -379,7 +395,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/AR/2.jpeg">
+          <a href="#ar-2"><img class="cover-picture" src="/img/AR/2.jpeg"></a>
+          <a href="#" class="lightbox" id="ar-2">
+            <div style="background-image: url('/img/AR/2.jpeg')"></div>
+          </a>
         </div>
       </div>
     </div>
@@ -410,7 +429,10 @@
       </div>
       <div class="side-b">
         <div class="picture-container">
-          <img class="cover-picture" src="/img/AR/3.jpeg">
+          <a href="#ar-3"><img class="cover-picture" src="/img/AR/3.jpeg"></a>
+          <a href="#" class="lightbox" id="ar-3">
+            <div style="background-image: url('/img/AR/3.jpeg')"></div>
+          </a>
         </div>
       </div>
     </div>
