@@ -24,7 +24,7 @@
   }
 
   .container {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     height: 100%;
     min-height: 100vh;
@@ -113,25 +113,21 @@
     margin-top: 2em;
   }
 
-  section
-  {
+  section {
     min-height: 100vh;
     height: fit-content;
     background-color: #1e2626;
   }
 
-  section > p
-  {
+  section > p {
     margin: 1em;
   }
 
-  .subtext
-  {
+  .subtext {
     font-size: smaller;
   }
 
-  #gameContainer
-  {
+  #gameContainer {
     height: 100%;
     flex: 1;
   }
@@ -140,11 +136,9 @@
 <script>
 
   import {onMount, tick} from 'svelte';
-
-  import sticky from "./sticky";
   import NotionText from "./NotionText.svelte";
   import createScrollSnap from 'scroll-snap'
-  import {sineInOut, quartOut} from "svelte/easing";
+  import {sineInOut} from "svelte/easing";
 
   let isStuck = false;
 
@@ -189,7 +183,9 @@
   <section class="heading-container">
     <div class="welcome">
       <h1>Storymaker World <br/> The Journey</h1>
-      <p>The following page is an interactive exhibition that contains a <strong>game,</strong> a <strong>gallery of posters</strong> and a <strong>gallery of Augmented Reality (AR) illustrations.</strong> For the best viewing experience, please use your browser on your computer or laptop. </p>
+      <p>The following page is an interactive exhibition that contains a <strong>game,</strong> a <strong>gallery of
+        posters</strong> and a <strong>gallery of Augmented Reality (AR) illustrations.</strong> For the best viewing
+        experience, please use your browser on your computer or laptop. </p>
     </div>
   </section>
 
@@ -197,8 +193,11 @@
   <section class="heading-container">
     <div class="welcome">
       <h1>Chapter 1.<br/> The Heart</h1>
-      <p>You wake up on a boat. Where the boat it’s going, you don’t know—you can only hear the sails catching the wind and birds calling up above, the scent of brackish water and vegetation thick in your nose. You wake up on a boat. Your destination is unknown; your journey, unwritten.</p>
-      <p>The year is <strong>1864</strong>. When you stand, you see hills opening up to the mouth of a great river, sandy-brown in the light of the greyish dawn.</p>
+      <p>You wake up on a boat. Where the boat it’s going, you don’t know—you can only hear the sails catching the wind
+        and birds calling up above, the scent of brackish water and vegetation thick in your nose. You wake up on a
+        boat. Your destination is unknown; your journey, unwritten.</p>
+      <p>The year is <strong>1864</strong>. When you stand, you see hills opening up to the mouth of a great river,
+        sandy-brown in the light of the greyish dawn.</p>
       <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
   </section>
@@ -226,7 +225,9 @@
   <section class="heading-container">
     <div class="welcome">
       <h1>Chapter 2.<br/> From the Highlands to the Coast</h1>
-      <p>Time spins forward, an unspooling of history. You are on a train going East. East of where? You don’t know. There is a book open in your lap, its pages earmarked by a careless hand. The newspaper on the bench next to you speaks of unrest in Europe. The year is <strong>1922</strong>. </p>
+      <p>Time spins forward, an unspooling of history. You are on a train going East. East of where? You don’t know.
+        There is a book open in your lap, its pages earmarked by a careless hand. The newspaper on the bench next to you
+        speaks of unrest in Europe. The year is <strong>1922</strong>. </p>
       <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
   </section>
@@ -237,15 +238,19 @@
       <div class="side-a">
         <div class="fullHeight">
           <h2>A Missed Destiny</h2>
-          <p>A thin fog sits over the valley; and on either side, mountains tower like the spinal column of a creature, asleep. The writer talks of loneliness and isolation. You wonder why: as the train snakes between the peaks and into the fog, a sense of familiarity settles over you. Welcome home, safe travels. </p>
-          <p class="subtext">Pictured: An illustrated representation of the Ethiopian Highlands. The quote reads, <em>“I couldn&#39;t have felt more of lonely desolation somehow</em>, <em>had I been robbed of a belief or had missed my destiny in life…”</em> (Conrad, <em>Heart of Darkness)</em></p>
+          <p>A thin fog sits over the valley; and on either side, mountains tower like the spinal column of a creature,
+            asleep. The writer talks of loneliness and isolation. You wonder why: as the train snakes between the peaks
+            and into the fog, a sense of familiarity settles over you. Welcome home, safe travels. </p>
+          <p class="subtext">Pictured: An illustrated representation of the Ethiopian Highlands. The quote reads, <em>“I
+            couldn&#39;t have felt more of lonely desolation somehow</em>, <em>had I been robbed of a belief or had
+            missed my destiny in life…”</em> (Conrad, <em>Heart of Darkness)</em></p>
         </div>
 
       </div>
       <div class="side-b">
         <div class="picture-container">
           <a href="#poster-1"><img class="cover-picture" src="/img/posters/1.jpg"></a>
-          <a href="#" class="lightbox" id="poster-1">
+          <a class="lightbox" href="#" id="poster-1">
             <div style="background-image: url('/img/posters/1.jpg')"></div>
           </a>
         </div>
@@ -267,14 +272,17 @@
             rushing
             past too quickly to hear?</p>
 
-          <p>The unknown and the awful always bring a man closer to his maker, the writer says. Before you, the stars are mute anyhow.</p>
-          <p class="subtext"> Pictured: An illustrated representation of the Sahara Desert. The quote reads, “Our future was so completely unknown, and I think that the unknown and the awful always bring a man nearer to his Maker.” (Haggard, King Solomon’s Mines)</p>
+          <p>The unknown and the awful always bring a man closer to his maker, the writer says. Before you, the stars
+            are mute anyhow.</p>
+          <p class="subtext"> Pictured: An illustrated representation of the Sahara Desert. The quote reads, “Our future
+            was so completely unknown, and I think that the unknown and the awful always bring a man nearer to his
+            Maker.” (Haggard, King Solomon’s Mines)</p>
         </div>
       </div>
       <div class="side-b">
         <div class="picture-container">
           <a href="#poster-2"><img class="cover-picture" src="/img/posters/2.jpg"></a>
-          <a href="#" class="lightbox" id="poster-2">
+          <a class="lightbox" href="#" id="poster-2">
             <div style="background-image: url('/img/posters/2.jpg')"></div>
           </a>
         </div>
@@ -297,13 +305,15 @@
             water.
             <em>The inextinguishable elements of individual life,</em> ink running into spiderwebs with the memory of a
             river.</p>
-          <p class="subtext">Pictured: An illustrated representation of the coast of South Africa. The quote reads, “Truly the universe is full of ghosts, not sheeted churchyard spectres, but the inextinguishable elements of individual life.” (Haggard, King Solomon’s Mines)</p>
+          <p class="subtext">Pictured: An illustrated representation of the coast of South Africa. The quote reads,
+            “Truly the universe is full of ghosts, not sheeted churchyard spectres, but the inextinguishable elements of
+            individual life.” (Haggard, King Solomon’s Mines)</p>
         </div>
       </div>
       <div class="side-b">
         <div class="picture-container">
           <a href="#poster-3"><img class="cover-picture" src="/img/posters/3.jpg"></a>
-          <a href="#" class="lightbox" id="poster-3">
+          <a class="lightbox" href="#" id="poster-3">
             <div style="background-image: url('/img/posters/3.jpg')"></div>
           </a>
         </div>
@@ -330,13 +340,15 @@
           <p>You walk to the edge of the water. The waves lap gently at your feet. You slip the book into your pocket
             and
             close your eyes.</p>
-          <p class="subtext">Pictured: An illustration of  Nigerian women reclining by the seaside. The quote reads, “We live in the flicker—may it last as long as the old earth keeps rolling! But darkness was here yesterday.” (Conrad, Heart of Darkness)</p>
+          <p class="subtext">Pictured: An illustration of Nigerian women reclining by the seaside. The quote reads, “We
+            live in the flicker—may it last as long as the old earth keeps rolling! But darkness was here yesterday.”
+            (Conrad, Heart of Darkness)</p>
         </div>
       </div>
       <div class="side-b">
         <div class="picture-container">
           <a href="#poster-4"><img class="cover-picture" src="/img/posters/4.jpg"></a>
-          <a href="#" class="lightbox" id="poster-4">
+          <a class="lightbox" href="#" id="poster-4">
             <div style="background-image: url('/img/posters/4.jpg')"></div>
           </a>
         </div>
@@ -350,9 +362,18 @@
     <div class="welcome">
       <h1>Chapter 3. <br/> Storymaker</h1>
       <div class="subtext">
-      <p>To view the AR illustration gallery fully, please download the Artivive app on your <strong>mobile phone.</strong> The app can be found <strong><a href="https://play.google.com/store/apps/details?id=com.artivive&amp;hl=en_GB&amp;gl=US">here</a></strong> for Android and <a href="https://apps.apple.com/us/app/artivive/id1188737494"><strong>here</strong></a> for IOS devices. Scan each image in <em>Chapter III—Storymaker</em> using the Artivive app to see the complete illustration. </p>
-      <p>If you are having trouble with the app, you can also find the animated versions of the illustrations <a href="https://drive.google.com/drive/folders/1B3mJp44gRlXGYpiYQPeU7Ztu4JsjsRLX">here</a>.</p></div>
-      <p>You wake up. You are in a room made of glass. You wake up. You are standing knee-deep in water, the river yellow and heavy with sediment. You wake up. A screen in front of you tells you the year—the article talks about species preservation and a conservatory that flies over the desert, it talks about living dreams and people touching the stars. You’re back, the city says, and you open the door.  </p>
+        <p>To view the AR illustration gallery fully, please download the Artivive app on your <strong>mobile
+          phone.</strong> The app can be found <strong><a
+          href="https://play.google.com/store/apps/details?id=com.artivive&amp;hl=en_GB&amp;gl=US">here</a></strong> for
+          Android and <a href="https://apps.apple.com/us/app/artivive/id1188737494"><strong>here</strong></a> for IOS
+          devices. Scan each image in <em>Chapter III—Storymaker</em> using the Artivive app to see the complete
+          illustration. </p>
+        <p>If you are having trouble with the app, you can also find the animated versions of the illustrations <a
+          href="https://drive.google.com/drive/folders/1B3mJp44gRlXGYpiYQPeU7Ztu4JsjsRLX">here</a>.</p></div>
+      <p>You wake up. You are in a room made of glass. You wake up. You are standing knee-deep in water, the river
+        yellow and heavy with sediment. You wake up. A screen in front of you tells you the year—the article talks about
+        species preservation and a conservatory that flies over the desert, it talks about living dreams and people
+        touching the stars. You’re back, the city says, and you open the door. </p>
       <img class="divider" src="/img/dividers/01.PNG"/>
     </div>
   </section>
@@ -374,7 +395,7 @@
       <div class="side-b">
         <div class="picture-container">
           <a href="#ar-1"><img class="cover-picture" src="/img/AR/1.jpeg"></a>
-          <a href="#" class="lightbox" id="ar-1">
+          <a class="lightbox" href="#" id="ar-1">
             <div style="background-image: url('/img/AR/1.jpeg')"></div>
           </a>
         </div>
@@ -396,7 +417,7 @@
       <div class="side-b">
         <div class="picture-container">
           <a href="#ar-2"><img class="cover-picture" src="/img/AR/2.jpeg"></a>
-          <a href="#" class="lightbox" id="ar-2">
+          <a class="lightbox" href="#" id="ar-2">
             <div style="background-image: url('/img/AR/2.jpeg')"></div>
           </a>
         </div>
@@ -430,7 +451,7 @@
       <div class="side-b">
         <div class="picture-container">
           <a href="#ar-3"><img class="cover-picture" src="/img/AR/3.jpeg"></a>
-          <a href="#" class="lightbox" id="ar-3">
+          <a class="lightbox" href="#" id="ar-3">
             <div style="background-image: url('/img/AR/3.jpeg')"></div>
           </a>
         </div>
@@ -452,8 +473,6 @@
         the story ever gets to touching its colonial inspiration. As you travelled through time into <b><em>From the
           Highlands to the Coast</em></b>, then—finally—to <b><em>Storymaker</em></b>, you have crossed a distance not
         only in time and place, but in thinking, too.</p>
-      <p>The artwork and text quotes are from the following novels and from the following authors:</p>
-      <p>[references]</p>
       <p>For a breakdown of each individual project and other supporting materials, please make your way to the <b>Sketchbook.</b>
       </p>
       <img class="divider" src="/img/dividers/01.PNG"/><br/>
