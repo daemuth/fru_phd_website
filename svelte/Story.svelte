@@ -473,8 +473,6 @@
         the story ever gets to touching its colonial inspiration. As you travelled through time into <b><em>From the
           Highlands to the Coast</em></b>, then—finally—to <b><em>Storymaker</em></b>, you have crossed a distance not
         only in time and place, but in thinking, too.</p>
-      <p>For a breakdown of each individual project and other supporting materials, please make your way to the <b>Sketchbook.</b>
-      </p>
       <img class="divider" src="/img/dividers/01.PNG"/><br/>
     </div>
   </section>
