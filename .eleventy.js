@@ -177,7 +177,7 @@ module.exports = function (eleventyConfig) {
     }
     return dt.toISO();
   });
-  
+
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
     if (n < 0) {
@@ -197,6 +197,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
   eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("docs");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("game");
   // We need to copy cached.js only if GA is used
